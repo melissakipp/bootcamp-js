@@ -4,6 +4,8 @@ EXPOSE 3000
 
 WORKDIR /usr/src/app
 
+RUN apk update && apk add bash
+
 COPY package.json package-lock.json* ./ 
 
 RUN npm install && npm cache clean --force
