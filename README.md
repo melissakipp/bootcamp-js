@@ -28,7 +28,7 @@ git clone <git-repo-url>
 docker-compose run web npm install
 ```
 
-_Note: Since there is no NodeJS on this machine, this command is required so that the packages are installed and avaiable for the next step._
+_Note: Since there is no NodeJS on this machine, this command is required so that the packages are installed and avaiable for the next step. Also the node_module folder is only in the container. It is not being written to the host machine's disk._
 
 3. Start Node Container
 
