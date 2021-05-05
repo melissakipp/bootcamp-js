@@ -4,12 +4,15 @@ EXPOSE 3000
 
 WORKDIR /usr/src/app
 
-RUN apk update && apk add bash
+RUN apk update && apk add bash --no-cache \
+  tini
 
-COPY package.json package-lock.json* ./ 
+COPY package.json package-lock*.json ./ 
 
 RUN npm install && npm cache clean --force
 
 COPY . .
+
+ENTRYPOINT [ "/sbin/tini", "-s", "--" ]
 
 CMD [ "node", "app.js" ]
