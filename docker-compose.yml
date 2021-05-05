@@ -5,7 +5,11 @@ services:
     image: bootcamp-2.0
     init: true
     build: .
+    command: /usr/src/app/node_modules/.bin/nodemon ./index.js
     ports:
       - "3000:3000"
     volumes:
       - ./:/usr/src/app
+    environment:
+      - DEBUG=bootcamp:*
+      - NODE_ENV=development

@@ -25,7 +25,7 @@ git clone <git-repo-url>
 2. Docker Commands
 
 ```
-docker-compose run web npm install
+docker-compose run --name test-two web npm install && npm install nodemon --save-dev
 ```
 
 _Note: Since there is no NodeJS on this machine, this command is required so that the packages are installed and avaiable for the next step._
