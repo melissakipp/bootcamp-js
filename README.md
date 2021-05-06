@@ -19,13 +19,13 @@ After taking Bret Fishers Docker for Node.js, I am now starting courses on the J
 1. Clone Repo
 
 ```terminal
-git clone <git-repo-url>
+git clone https://github.com/melissakipp/bootcamp-js.git
 ```
 
 2. Docker Commands
 
 ```
-docker-compose run --name test-two web npm install && npm install nodemon --save-dev
+docker-compose run --name expressAPP web npm install && npm install nodemon --save-dev
 ```
 
 _Note: Since there is no NodeJS on this machine, this command is required so that the packages are installed and avaiable for the next step._
