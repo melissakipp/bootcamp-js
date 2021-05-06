@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   web:
-    image: bootcamp-2.0
+    image: bootcamp-js:1.0.0
     init: true
     build: .
     command: /usr/src/app/node_modules/.bin/nodemon ./index.js

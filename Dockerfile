@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 RUN apk update && apk add bash --no-cache tini
 
-COPY package.json package-lock*.json ./ 
+COPY package*.json ./ 
 
 RUN npm install && npm cache clean --force
 
